@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TTHoves-Regular.ttf">
+            <string>TTHoves-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Fortune Wheel View Controller-->
+        <scene sceneID="AVG-R9-GEE">
+            <objects>
+                <viewController storyboardIdentifier="Wheel" modalPresentationStyle="fullScreen" id="NBc-mL-fDV" customClass="FortuneWheelViewController" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Bc-sf-bcU">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgO-Vc-4j6">
+                                <rect key="frame" x="120" y="450" width="570" height="570"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx5-Td-a2e">
+                                        <rect key="frame" x="12" y="12" width="546" height="546"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-ev-tsW">
+                                                <rect key="frame" x="0.0" y="0.0" width="546" height="546"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkW-ka-HMd" customClass="SwiftFortuneWheel" customModule="CoreCampAppTeamA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="546" height="546"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.98431372549019602" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="PkW-ka-HMd" firstAttribute="top" secondItem="xx5-Td-a2e" secondAttribute="top" id="5wY-xL-ZRz"/>
+                                            <constraint firstAttribute="bottom" secondItem="PkW-ka-HMd" secondAttribute="bottom" id="9eD-qe-FsB"/>
+                                            <constraint firstAttribute="width" secondItem="xx5-Td-a2e" secondAttribute="height" multiplier="1:1" id="LHe-DK-yLW"/>
+                                            <constraint firstAttribute="trailing" secondItem="PkW-ka-HMd" secondAttribute="trailing" id="hlW-wA-Z5W"/>
+                                            <constraint firstItem="uzK-ev-tsW" firstAttribute="top" secondItem="xx5-Td-a2e" secondAttribute="top" id="lMF-4c-RgQ"/>
+                                            <constraint firstItem="uzK-ev-tsW" firstAttribute="leading" secondItem="xx5-Td-a2e" secondAttribute="leading" id="ltE-hx-Xhe"/>
+                                            <constraint firstAttribute="bottom" secondItem="uzK-ev-tsW" secondAttribute="bottom" id="p4v-JL-Pic"/>
+                                            <constraint firstAttribute="trailing" secondItem="uzK-ev-tsW" secondAttribute="trailing" id="wii-pc-QXa"/>
+                                            <constraint firstItem="PkW-ka-HMd" firstAttribute="leading" secondItem="xx5-Td-a2e" secondAttribute="leading" id="xJs-YP-Z2B"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkBlueRightPinImage" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-8G-909">
+                                        <rect key="frame" x="505" y="259" width="75" height="52"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="9XT-1R-IB4"/>
+                                            <constraint firstAttribute="height" constant="52" id="FBZ-Dt-Q6y"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.98431372549019602" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CbC-8G-909" firstAttribute="trailing" secondItem="xx5-Td-a2e" secondAttribute="trailing" constant="22" id="17T-tm-m3R"/>
+                                    <constraint firstItem="xx5-Td-a2e" firstAttribute="leading" secondItem="zgO-Vc-4j6" secondAttribute="leading" constant="12" id="73b-Us-XaG"/>
+                                    <constraint firstAttribute="trailing" secondItem="xx5-Td-a2e" secondAttribute="trailing" constant="12" id="8y2-KV-puM"/>
+                                    <constraint firstAttribute="bottom" secondItem="xx5-Td-a2e" secondAttribute="bottom" constant="12" id="FIa-WK-4q0"/>
+                                    <constraint firstItem="CbC-8G-909" firstAttribute="centerY" secondItem="uzK-ev-tsW" secondAttribute="centerY" id="KsR-TR-uWm"/>
+                                    <constraint firstAttribute="width" secondItem="zgO-Vc-4j6" secondAttribute="height" multiplier="1:1" id="W81-0f-06k"/>
+                                    <constraint firstItem="xx5-Td-a2e" firstAttribute="top" secondItem="zgO-Vc-4j6" secondAttribute="top" constant="12" id="ia7-mv-bjd"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AMO-zk-k0n" appends="YES" id="33v-Eu-IqZ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ba-B1-iSg">
+                                <rect key="frame" x="50" y="0.0" width="710" height="450"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe the wheel!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBj-Zy-1fP">
+                                        <rect key="frame" x="215" y="200" width="280.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rdb-ul-i7z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TTHoves-Regular" family="TT Hoves" pointSize="37"/>
+                                        <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.98431372549019602" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZBj-Zy-1fP" firstAttribute="centerX" secondItem="1Ba-B1-iSg" secondAttribute="centerX" id="4eh-d5-UUG"/>
+                                    <constraint firstItem="ZBj-Zy-1fP" firstAttribute="centerY" secondItem="1Ba-B1-iSg" secondAttribute="centerY" id="F4Q-Yp-MaT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BcJ-nw-nRD"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="1Ba-B1-iSg" firstAttribute="centerX" secondItem="BcJ-nw-nRD" secondAttribute="centerX" id="6M3-SC-FWD"/>
+                            <constraint firstItem="1Ba-B1-iSg" firstAttribute="leading" secondItem="BcJ-nw-nRD" secondAttribute="leading" constant="50" id="HQz-5b-dPY"/>
+                            <constraint firstItem="zgO-Vc-4j6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BcJ-nw-nRD" secondAttribute="top" constant="100" id="Ibq-zI-wtf"/>
+                            <constraint firstItem="BcJ-nw-nRD" firstAttribute="bottom" secondItem="zgO-Vc-4j6" secondAttribute="bottom" constant="60" id="SAa-6K-IJu"/>
+                            <constraint firstItem="BcJ-nw-nRD" firstAttribute="trailing" secondItem="zgO-Vc-4j6" secondAttribute="trailing" priority="999" constant="120" id="XE6-Ax-Nya"/>
+                            <constraint firstItem="1Ba-B1-iSg" firstAttribute="top" secondItem="BcJ-nw-nRD" secondAttribute="top" id="XRm-iI-owz"/>
+                            <constraint firstItem="zgO-Vc-4j6" firstAttribute="centerX" secondItem="BcJ-nw-nRD" secondAttribute="centerX" id="cNo-vg-M7X"/>
+                            <constraint firstItem="zgO-Vc-4j6" firstAttribute="top" secondItem="1Ba-B1-iSg" secondAttribute="bottom" id="qJl-1x-Ipf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fortuneWheel" destination="PkW-ka-HMd" id="4tl-JA-m9l"/>
+                        <outlet property="gestureRecognizer" destination="AMO-zk-k0n" id="SIh-PZ-QME"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jo-Ra-cUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer delaysTouchesBegan="YES" minimumNumberOfTouches="1" id="AMO-zk-k0n">
+                    <connections>
+                        <action selector="swipeWheelOccured:" destination="NBc-mL-fDV" id="eug-5u-tyE"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2344.4444444444443" y="-73.333333333333329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="darkBlueRightPinImage" width="29" height="25"/>
+        <image name="shadow" width="210" height="210"/>
+    </resources>
+</document>

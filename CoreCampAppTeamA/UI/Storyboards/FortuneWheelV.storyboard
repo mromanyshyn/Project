@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fortune Wheel View ControllerV-->
+        <scene sceneID="AVG-R9-GEE">
+            <objects>
+                <viewController storyboardIdentifier="Wheel" modalPresentationStyle="fullScreen" id="NBc-mL-fDV" customClass="FortuneWheelViewControllerV" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Bc-sf-bcU">
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-to-waQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-z7-cwF" customClass="SpinWheelControl" customModule="CoreCampAppTeamA" customModuleProvider="target">
+                                <rect key="frame" x="340" y="113" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="INA-4p-zEf"/>
+                                    <constraint firstAttribute="width" constant="400" id="y7z-gW-Fzf"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newPin" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-Jt-WwN">
+                                <rect key="frame" x="500" y="83" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LQk-eH-eOi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WheelLabel" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-Mg-5aa">
+                                <rect key="frame" x="390" y="24" width="300" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="NAB-dr-df6"/>
+                                    <constraint firstAttribute="width" constant="300" id="O1n-Q6-6j1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXg-My-zcs">
+                                <rect key="frame" x="490" y="548" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.6588235294117647" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RN4-OD-8Sw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ip8-dK-8Ak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="26"/>
+                                <state key="normal" title="Spin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressSpin:" destination="NBc-mL-fDV" eventType="touchUpInside" id="VcK-DK-7GX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BcJ-nw-nRD"/>
+                        <color key="backgroundColor" red="0.23921568627450979" green="0.23529411764705882" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pE7-to-waQ" firstAttribute="trailing" secondItem="BcJ-nw-nRD" secondAttribute="trailing" id="7ZJ-r9-0yB"/>
+                            <constraint firstItem="JXg-My-zcs" firstAttribute="top" secondItem="4x7-z7-cwF" secondAttribute="bottom" constant="35" id="8oj-TI-SV6"/>
+                            <constraint firstItem="4x7-z7-cwF" firstAttribute="top" secondItem="BcJ-nw-nRD" secondAttribute="top" constant="113" id="FvI-w4-mlm"/>
+                            <constraint firstItem="pE7-to-waQ" firstAttribute="bottom" secondItem="BcJ-nw-nRD" secondAttribute="bottom" id="JAe-gY-lCN"/>
+                            <constraint firstItem="pE7-to-waQ" firstAttribute="leading" secondItem="BcJ-nw-nRD" secondAttribute="leading" id="Syd-Y7-VLJ"/>
+                            <constraint firstItem="vaI-Mg-5aa" firstAttribute="centerX" secondItem="5Bc-sf-bcU" secondAttribute="centerX" id="TUc-h2-Ek5"/>
+                            <constraint firstItem="JXg-My-zcs" firstAttribute="centerX" secondItem="5Bc-sf-bcU" secondAttribute="centerX" id="UUM-OP-0UR"/>
+                            <constraint firstItem="4x7-z7-cwF" firstAttribute="top" secondItem="WdZ-Jt-WwN" secondAttribute="bottom" constant="-10" id="Wmf-G2-cTB"/>
+                            <constraint firstItem="WdZ-Jt-WwN" firstAttribute="centerX" secondItem="5Bc-sf-bcU" secondAttribute="centerX" id="bje-vx-Z9S"/>
+                            <constraint firstItem="4x7-z7-cwF" firstAttribute="centerX" secondItem="5Bc-sf-bcU" secondAttribute="centerX" id="hvz-P2-fO7"/>
+                            <constraint firstItem="WdZ-Jt-WwN" firstAttribute="top" secondItem="vaI-Mg-5aa" secondAttribute="bottom" constant="-36" id="sVl-Zu-yH3"/>
+                            <constraint firstItem="pE7-to-waQ" firstAttribute="top" secondItem="BcJ-nw-nRD" secondAttribute="top" id="y4I-Hu-p7s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spinButton" destination="JXg-My-zcs" id="7Tk-FG-vSi"/>
+                        <outlet property="spinWheelControl" destination="4x7-z7-cwF" id="xA2-xl-VnK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jo-Ra-cUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344.4444444444443" y="-73.333333333333329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WheelLabel" width="1920" height="649"/>
+        <image name="newPin" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

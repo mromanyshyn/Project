@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TTHoves-Regular.ttf">
+            <string>TTHoves-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation View Controller My-->
+        <scene sceneID="rwy-0Q-e0V">
+            <objects>
+                <viewController storyboardIdentifier="Navigation" id="wRF-f1-oXZ" customClass="NavigationViewControllerMy" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uWo-ve-xUf">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vPF-km-Ssx">
+                                <rect key="frame" x="70" y="55" width="694" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIm-OL-hPv" userLabel="LogoButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Vzs-Uv-1dj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="logo"/>
+                                        <connections>
+                                            <action selector="logoButtonPressed:" destination="wRF-f1-oXZ" eventType="touchUpInside" id="y5f-F8-ZwM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-uo-rEK">
+                                        <rect key="frame" x="232" y="0.0" width="97" height="52"/>
+                                        <fontDescription key="fontDescription" name="TTHoves-Regular" family="TT Hoves" pointSize="18"/>
+                                        <state key="normal" title="Randomizer">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="randomiserButtonPressed:" destination="wRF-f1-oXZ" eventType="touchUpInside" id="oTB-n1-gFb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U0-7K-vyR">
+                                        <rect key="frame" x="361" y="0.0" width="112" height="52"/>
+                                        <fontDescription key="fontDescription" name="TTHoves-Regular" family="TT Hoves" pointSize="18"/>
+                                        <state key="normal" title="Fortune Whell">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="furtuneWheelButtonPressed:" destination="wRF-f1-oXZ" eventType="touchUpInside" id="CLj-mr-OkC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLC-E7-d8N">
+                                        <rect key="frame" x="505" y="0.0" width="82" height="52"/>
+                                        <fontDescription key="fontDescription" name="TTHoves-Regular" family="TT Hoves" pointSize="18"/>
+                                        <state key="normal" title="Recruiters">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recrutersButtonPressed:" destination="wRF-f1-oXZ" eventType="touchUpInside" id="nVX-sn-ypU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7G-fS-4X4">
+                                        <rect key="frame" x="619" y="0.0" width="75" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Speakers">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="speakersButtonPressed:" destination="wRF-f1-oXZ" eventType="touchUpInside" id="r5m-WG-PiV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bf-n5-Ffg">
+                                <rect key="frame" x="0.0" y="115" width="834" height="1007"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Wgc-6r-dmk">
+                                <rect key="frame" x="0.0" y="1130" width="834" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="M38-CT-CgB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e2I-eN-ggT"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Bf-n5-Ffg" firstAttribute="leading" secondItem="e2I-eN-ggT" secondAttribute="leading" id="8jL-N6-cDW"/>
+                            <constraint firstItem="vPF-km-Ssx" firstAttribute="top" secondItem="e2I-eN-ggT" secondAttribute="top" constant="55" id="MLl-jf-lty"/>
+                            <constraint firstItem="Wgc-6r-dmk" firstAttribute="trailing" secondItem="2Bf-n5-Ffg" secondAttribute="trailing" id="Ubt-Mc-5vp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Wgc-6r-dmk" secondAttribute="bottom" constant="-20" id="XTn-ep-rgg"/>
+                            <constraint firstItem="Wgc-6r-dmk" firstAttribute="leading" secondItem="2Bf-n5-Ffg" secondAttribute="leading" id="YEO-k6-8QB"/>
+                            <constraint firstItem="e2I-eN-ggT" firstAttribute="trailing" secondItem="2Bf-n5-Ffg" secondAttribute="trailing" id="Z7M-Ab-oYQ"/>
+                            <constraint firstItem="vPF-km-Ssx" firstAttribute="leading" secondItem="e2I-eN-ggT" secondAttribute="leading" constant="70" id="ef9-Zr-R4H"/>
+                            <constraint firstItem="2Bf-n5-Ffg" firstAttribute="top" secondItem="vPF-km-Ssx" secondAttribute="bottom" constant="8" id="oUC-kC-X9F"/>
+                            <constraint firstItem="Wgc-6r-dmk" firstAttribute="top" secondItem="2Bf-n5-Ffg" secondAttribute="bottom" constant="8" id="ry4-vd-UaA"/>
+                            <constraint firstItem="e2I-eN-ggT" firstAttribute="trailing" secondItem="vPF-km-Ssx" secondAttribute="trailing" constant="70" id="wsO-71-7mD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="NavigationUiView" destination="2Bf-n5-Ffg" id="fhy-eD-BIm"/>
+                        <outlet property="menu" destination="vPF-km-Ssx" id="239-Ns-TP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWz-zr-IOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2438.129496402878" y="-351.2562814070352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="footer" width="417" height="28.5"/>
+        <image name="logo" width="168" height="52"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

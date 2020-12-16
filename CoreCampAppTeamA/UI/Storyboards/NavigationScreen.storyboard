@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u2A-sV-9QQ">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation View Controller-->
+        <scene sceneID="2xm-fh-9T7">
+            <objects>
+                <viewController storyboardIdentifier="NavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u2A-sV-9QQ" customClass="NavigationViewController" customModule="CoreCampAppTeamA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jae-wq-oUW"/>
+                        <viewControllerLayoutGuide type="bottom" id="f6G-dI-Spe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eEk-7N-7fg">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtN-0x-JEu">
+                                <rect key="frame" x="0.0" y="120" width="820" height="1010"/>
+                                <color key="backgroundColor" name="background_color"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="c4r-tK-QDF">
+                                <rect key="frame" x="0.0" y="1130" width="820" height="50"/>
+                                <color key="tintColor" red="0.084786094729999997" green="0.31915080550000002" blue="0.95988172289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zfZ-eG-vEj"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-zc-dor" userLabel="Header View">
+                                <rect key="frame" x="5" y="20" width="795" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlT-bW-noH">
+                                        <rect key="frame" x="50" y="0.0" width="161.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WlT-bW-noH" secondAttribute="height" multiplier="336:104" id="0ap-Md-xK6"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="20" maxY="5"/>
+                                        <state key="normal" image="AvengaLogo">
+                                            <color key="titleColor" name="randomizer_color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="avengeButtonFunc:" destination="u2A-sV-9QQ" eventType="touchUpInside" id="PFE-1d-LiL"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="836-w8-aSu">
+                                        <rect key="frame" x="211.5" y="0.0" width="583.5" height="50"/>
+                                        <color key="backgroundColor" name="background_color"/>
+                                        <color key="tintColor" name="background_color"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VIV-Ju-TlK">
+                                            <size key="itemSize" width="0.0" height="0.0"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NavigationCell" id="ee5-UC-X1E" customClass="NavigationCell" customModule="CoreCampAppTeamA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1" width="63" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WQc-z1-eeZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUW-km-7Vq">
+                                                            <rect key="frame" x="10.5" y="14" width="42" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="zUW-km-7Vq" firstAttribute="centerY" secondItem="WQc-z1-eeZ" secondAttribute="centerY" id="7pD-Q7-lia"/>
+                                                        <constraint firstItem="zUW-km-7Vq" firstAttribute="centerX" secondItem="WQc-z1-eeZ" secondAttribute="centerX" id="c8q-Dc-2t9"/>
+                                                        <constraint firstItem="zUW-km-7Vq" firstAttribute="leading" secondItem="WQc-z1-eeZ" secondAttribute="leading" priority="751" constant="10" id="fkI-aI-o9z"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="customSize" width="63" height="48"/>
+                                                <connections>
+                                                    <outlet property="screenNameLabel" destination="zUW-km-7Vq" id="fcl-Dn-Zzs"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WlT-bW-noH" secondAttribute="bottom" id="2pS-1e-aMy"/>
+                                    <constraint firstItem="836-w8-aSu" firstAttribute="leading" secondItem="WlT-bW-noH" secondAttribute="trailing" id="6LM-6d-I9O"/>
+                                    <constraint firstAttribute="trailing" secondItem="836-w8-aSu" secondAttribute="trailing" id="7Np-5F-2DU"/>
+                                    <constraint firstAttribute="bottom" secondItem="836-w8-aSu" secondAttribute="bottom" id="Ata-vL-Ndh"/>
+                                    <constraint firstAttribute="height" constant="50" id="gTe-qn-bCg"/>
+                                    <constraint firstItem="WlT-bW-noH" firstAttribute="top" secondItem="eLT-zc-dor" secondAttribute="top" id="lIK-5C-ck3"/>
+                                    <constraint firstItem="836-w8-aSu" firstAttribute="top" secondItem="eLT-zc-dor" secondAttribute="top" id="n03-Z4-mKY"/>
+                                    <constraint firstItem="WlT-bW-noH" firstAttribute="leading" secondItem="eLT-zc-dor" secondAttribute="leading" constant="50" id="sts-H8-U7Q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="background_color"/>
+                        <constraints>
+                            <constraint firstItem="eLT-zc-dor" firstAttribute="width" secondItem="eEk-7N-7fg" secondAttribute="width" multiplier="0.88" constant="73.399999999999977" id="4H6-at-fbN"/>
+                            <constraint firstItem="c4r-tK-QDF" firstAttribute="top" secondItem="QtN-0x-JEu" secondAttribute="bottom" id="FjL-Wv-Jl8"/>
+                            <constraint firstAttribute="trailing" secondItem="c4r-tK-QDF" secondAttribute="trailing" id="Fke-JD-hBw"/>
+                            <constraint firstAttribute="bottom" secondItem="c4r-tK-QDF" secondAttribute="bottom" id="MEB-So-z5F"/>
+                            <constraint firstItem="c4r-tK-QDF" firstAttribute="leading" secondItem="eEk-7N-7fg" secondAttribute="leading" id="Nrd-M2-gSX"/>
+                            <constraint firstItem="eLT-zc-dor" firstAttribute="centerX" secondItem="eEk-7N-7fg" secondAttribute="centerX" constant="-7.5" id="ROP-57-KIb"/>
+                            <constraint firstItem="QtN-0x-JEu" firstAttribute="top" secondItem="eLT-zc-dor" secondAttribute="bottom" constant="50" id="XeO-eN-79B"/>
+                            <constraint firstItem="QtN-0x-JEu" firstAttribute="leading" secondItem="eEk-7N-7fg" secondAttribute="leading" id="l6p-2z-rrd"/>
+                            <constraint firstItem="eLT-zc-dor" firstAttribute="top" secondItem="Jae-wq-oUW" secondAttribute="bottom" constant="20" id="muk-Da-ueH"/>
+                            <constraint firstAttribute="trailing" secondItem="QtN-0x-JEu" secondAttribute="trailing" id="u81-TH-4DT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avengaButton" destination="WlT-bW-noH" id="4LL-DD-DKI"/>
+                        <outlet property="contentView" destination="QtN-0x-JEu" id="Fzb-jB-Itt"/>
+                        <outlet property="headerView" destination="eLT-zc-dor" id="7q6-0L-uIT"/>
+                        <outlet property="navigationCollection" destination="836-w8-aSu" id="6Ok-0O-39D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9o-hY-CmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626.34146341463418" y="76.779661016949163"/>
+        </scene>
+        <!--Navigation Page View Controller-->
+        <scene sceneID="nVk-a8-hiM">
+            <objects>
+                <pageViewController storyboardIdentifier="navpagevc" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" doubleSided="YES" id="HlY-dW-BMZ" customClass="NavigationPageViewController" customModule="CoreCampAppTeamA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UdL-ZY-u1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AvengaLogo" width="336" height="104"/>
+        <image name="footer" width="417" height="28.5"/>
+        <namedColor name="background_color">
+            <color red="0.95300000905990601" green="0.98400002717971802" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="randomizer_color">
+            <color red="0.99900001287460327" green="0.30799999833106995" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

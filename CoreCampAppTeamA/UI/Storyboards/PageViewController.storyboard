@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Co-tB-V8n">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="A2g-ZY-x4B">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tFG-oc-LuA" customClass="PageViewController" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lWK-YH-Xvx"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWl-tA-cJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="16"/>
+        </scene>
+        <!--Aditional Page View Controller-->
+        <scene sceneID="hOV-6X-Jd8">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="1Co-tB-V8n" customClass="AditionalPageViewController" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NqX-bP-19F">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irv-bn-DHk">
+                                <rect key="frame" x="50" y="100" width="734" height="894"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ecX-2p-nBU">
+                                        <rect key="frame" x="306" y="858" width="123" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cet-h6-u7R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="irv-bn-DHk" secondAttribute="bottom" constant="200" id="3U8-yA-UZo"/>
+                            <constraint firstItem="cet-h6-u7R" firstAttribute="trailing" secondItem="irv-bn-DHk" secondAttribute="trailing" constant="50" id="6hi-i0-r6u"/>
+                            <constraint firstItem="irv-bn-DHk" firstAttribute="top" secondItem="cet-h6-u7R" secondAttribute="top" constant="100" id="AAW-G4-PqW"/>
+                            <constraint firstItem="irv-bn-DHk" firstAttribute="leading" secondItem="cet-h6-u7R" secondAttribute="leading" constant="50" id="V4K-3h-v5v"/>
+                            <constraint firstItem="irv-bn-DHk" firstAttribute="centerX" secondItem="NqX-bP-19F" secondAttribute="centerX" id="Y4t-Mm-ae6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DNU-uc-h8l"/>
+                    <connections>
+                        <outlet property="pageControl" destination="ecX-2p-nBU" id="MxW-0n-ZkN"/>
+                        <segue destination="tFG-oc-LuA" kind="presentation" modalTransitionStyle="crossDissolve" id="t5b-72-ar1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XpD-Sm-xnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395" y="16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

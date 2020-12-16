@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uu2-aC-NeS">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Page Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" id="BYZ-38-t0r" customClass="LoginPageController" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-kw-efR">
+                                <rect key="frame" x="224" y="542" width="386" height="110"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Ays-Vp-VCJ"/>
+                                    <constraint firstAttribute="width" constant="386" id="LUj-7h-nb4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="Sign in with Apple">
+                                    <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="singInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGK-vI-dwn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="WAZ-MN-RKL">
+                                <rect key="frame" x="0.0" y="1137" width="834" height="57"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cLZ-oG-qpg">
+                                <rect key="frame" x="20" y="148" width="794" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="oiu-u4-7Ji"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cLZ-oG-qpg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="VNr-Zh-DbK"/>
+                            <constraint firstItem="MMO-kw-efR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sDe-03-Uo3"/>
+                            <constraint firstItem="cLZ-oG-qpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="trM-KW-aQ1"/>
+                            <constraint firstItem="WAZ-MN-RKL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vnx-Eb-suy"/>
+                            <constraint firstItem="WAZ-MN-RKL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vwY-UT-frL"/>
+                            <constraint firstItem="MMO-kw-efR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVn-aZ-Vzd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cLZ-oG-qpg" secondAttribute="trailing" constant="20" id="z0h-ru-bth"/>
+                            <constraint firstAttribute="bottom" secondItem="WAZ-MN-RKL" secondAttribute="bottom" id="zKM-Up-IIj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OrI-D2-O9X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891.36690647482021" y="75.37688442211055"/>
+        </scene>
+        <!--Home Page Controller-->
+        <scene sceneID="RhR-uw-cKz">
+            <objects>
+                <viewController storyboardIdentifier="HomePageController" id="RlZ-fe-tEl" customClass="HomePageController" customModule="CoreCampAppTeamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kC-s3-DMM">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MainPage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f77-E2-GWg">
+                                <rect key="frame" x="379.5" y="586.5" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nzc-wd-dA5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f77-E2-GWg" firstAttribute="centerY" secondItem="5kC-s3-DMM" secondAttribute="centerY" id="CcJ-ee-KCs"/>
+                            <constraint firstItem="f77-E2-GWg" firstAttribute="centerX" secondItem="5kC-s3-DMM" secondAttribute="centerX" id="XzU-pd-4W2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="139-7M-rLo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dq-he-o49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K04-u0-qI1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="uu2-aC-NeS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bKg-R5-vop">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lmm-tA-oV0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vi0-xN-dfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.41007194244605" y="75.37688442211055"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applelogo" catalog="system" width="128" height="121"/>
+        <image name="footer" width="834" height="57"/>
+        <image name="logo" width="168" height="52"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
